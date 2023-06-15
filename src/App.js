@@ -7,16 +7,14 @@ import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
 import Fiels from './components/fiels';
 function App() {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
+  // const [name, setname] = useState("");
+  // const [email, setemail] = useState("");
+  const[form,setForm] = useState({});
   const [data, setdata] = useState([]);
   const addData = () => {
-    setdata([...data, {
-      name, email
-    }])
-    setname("");
-    setemail("");
-  }
+    setdata([...data, form])
+    setForm(form);
+  };
 
 const deleterecord=(index)=>{
 let arr = data;
@@ -31,8 +29,8 @@ setdata([...arr]);
       <Header />
       <div className="form">
         <Stack spacing={2} direction="row">
-          <TextField value={name} onChange={(event) => setname(event.target.value)} id="outlined-basic" label="name" variant="outlined" />
-          <TextField value={email} onChange={(event) => setemail(event.target.value)} id="outlined-basic" label="email" variant="outlined" />
+          <TextField value={form.name} onChange={(event) => setForm({...form, name: event.target.value})} id="outlined-basic" label="name" variant="outlined" />
+          <TextField value={form.email} onChange={(event) => setForm({...form, email: event.target.value})} id="outlined-basic" label="email" variant="outlined" />
           <Button onClick={addData} variant="contained" color="success">
             <AddIcon />
           </Button>
@@ -50,9 +48,9 @@ setdata([...arr]);
 
 
 {
-  data.map((element, index) => {
+  data.map((e, index) => {
     return(
-      <Fiels key={index} name={element.name} email={element.email} index={index} deleterecord={deleterecord}/>
+      <Fiels key={index} name={e.name} email={e.email} index={index} deleterecord={deleterecord}/>
     )
   })
 }
