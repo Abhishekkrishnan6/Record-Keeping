@@ -33,3 +33,9 @@ margin-top: 15px;
   padding: 0px 9px 0px 9px;
   box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
 }
+.dataa{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px;
+}

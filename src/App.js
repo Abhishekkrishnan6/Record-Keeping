@@ -6,6 +6,8 @@ import Stack from '@mui/material/Stack';
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
 import Fiels from './components/fiels';
+import Useeffectuse from './components/Useeffectuse';
+
 function App() {
   // const [name, setname] = useState("");
   // const [email, setemail] = useState("");
@@ -59,7 +61,7 @@ setdata([...arr]);
 
 
 
-
+<Useeffectuse />
     </div>
   );
 }
