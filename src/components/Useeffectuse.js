@@ -17,7 +17,7 @@ const Useeffectuse = () => {
     <div>
       
   <h1>USE EFFECT USES</h1>
-  <button onClick={()=> setstate(state+1)}>click me {state}</button>
+  <button onClick={()=> setstate(state+7)}>click me {state}</button>
   {
     data.map((element,index)=>{
       return (

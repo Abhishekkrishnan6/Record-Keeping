@@ -23,7 +23,12 @@ let arr = data;
 arr.splice(index,1);
 setdata([...arr]);
 }
-
+const handlepress =(e) =>{
+  if(e.key === 'Enter'){
+  addData();
+  }
+  console.log(e.key);
+}
 
   return (
     <div className="App">
@@ -32,8 +37,14 @@ setdata([...arr]);
       <div className="form">
         <Stack spacing={2} direction="row">
           <TextField value={form.name} onChange={(event) => setForm({...form, name: event.target.value})} id="outlined-basic" label="name" variant="outlined" />
-          <TextField value={form.email} onChange={(event) => setForm({...form, email: event.target.value})} id="outlined-basic" label="email" variant="outlined" />
-          <Button onClick={addData} variant="contained" color="success">
+          <TextField 
+          onCopy={()=> window.alert("copy mt kar be")}
+          onPaste={()=> window.alert("paste mt kr be")}
+          onDoubleClick={()=> window.alert("double clicked")}
+          onKeyPress={(e)=> handlepress(e)}
+          onKeyUp={() => window.alert("up key pressed")}
+          value={form.email} onChange={(event) => setForm({...form, email: event.target.value})} id="outlined-basic" label="email" variant="outlined" />
+          <Button draggable onDrag={() => console.log("dragged")} onClick={addData} variant="contained" color="success">
             <AddIcon />
           </Button>
         </Stack>
