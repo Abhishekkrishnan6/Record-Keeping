@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
 import Fiels from './components/fiels';
 import Useeffectuse from './components/Useeffectuse';
+import Layout from './components/Layout';
 
 function App() {
   // const [name, setname] = useState("");
@@ -73,6 +74,13 @@ const handlepress =(e) =>{
 
 
 <Useeffectuse />
+
+
+
+<Layout />
+
+
+
     </div>
   );
 }
