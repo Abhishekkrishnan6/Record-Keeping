@@ -13,7 +13,7 @@ const naveLinkStyle=({isActive})=>{
 
   return (
     <div className="header">
-      <NavLink style={naveLinkStyle} to={'/'}> Home  </NavLink>
+      <NavLink style={naveLinkStyle} to={'/app'}> Home  </NavLink>
       <NavLink style={naveLinkStyle} to={'/about'}>  About </NavLink>
       <NavLink style={naveLinkStyle} to={'/contact'}> Contact </NavLink>
        

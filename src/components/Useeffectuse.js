@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Useeffectuse = () => {
   const [state,setstate] = useState(10);
@@ -21,14 +22,14 @@ const Useeffectuse = () => {
   {
     data.map((element,index)=>{
       return (
-        
+        <Link to={`/app/${element.id}`}>
         <div className='dataa' key={index}>
           <h4>{element.firstName}</h4>
           <h4>{element.lastName}</h4>
           <h4>{element.email}</h4>
-
        
        </div>
+       </Link >
       )
     })
   }

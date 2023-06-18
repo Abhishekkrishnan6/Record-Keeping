@@ -43,6 +43,10 @@ margin-top: 15px;
 .dataa{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+  
+  text-align: center;
   padding: 5px;
 }
