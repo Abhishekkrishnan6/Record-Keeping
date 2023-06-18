@@ -14,7 +14,7 @@ const Useeffectuse = () => {
     document.title = `(${state}) Employees`;
   },[state])
   return (
-    <div>
+    <div className="App">
       
   <h1>USE EFFECT USES</h1>
   <button onClick={()=> setstate(state+7)}>click me {state}</button>
