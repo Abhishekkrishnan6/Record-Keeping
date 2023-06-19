@@ -16,6 +16,7 @@ import Insta from './components/Insta';
 import Userd from './components/Userd';
 import UseRef from './components/UseRef';
 import UseReducer from './components/UseReducer';
+import Customhook from './components/Customhook';
 const Data = createContext();
 const App = () => {
   const[data,setdat] = useState("reactstudy")
@@ -41,7 +42,7 @@ const App = () => {
       <Route path='/useref' element={<UseRef />} />
       <Route path='/usereducer' element={<UseReducer />} />
       
-      
+      <Route path='/customhook' element={<Customhook />} />
       
       </Routes>
       
