@@ -15,6 +15,7 @@ import Error from './components/Error';
 import Insta from './components/Insta';
 import Userd from './components/Userd';
 import UseRef from './components/UseRef';
+import UseReducer from './components/UseReducer';
 const Data = createContext();
 const App = () => {
   const[data,setdat] = useState("reactstudy")
@@ -38,6 +39,10 @@ const App = () => {
         </Route>
       <Route path='*' element={<Error />} />
       <Route path='/useref' element={<UseRef />} />
+      <Route path='/usereducer' element={<UseReducer />} />
+      
+      
+      
       </Routes>
       
     </div>
