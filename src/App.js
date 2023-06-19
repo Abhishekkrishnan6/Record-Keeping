@@ -1,10 +1,10 @@
 import Header from './components/Header';
-import Home from './components/Home'
 import './App.css'
 import Useeffectuse from './components/Useeffectuse';
 import Contact from './components/contact';
 import About from './components/About';
 import Twitter from './components/Twitter';
+import { useState, createContext } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,8 +14,12 @@ import {
 import Error from './components/Error';
 import Insta from './components/Insta';
 import Userd from './components/Userd';
+const Data = createContext();
 const App = () => {
+  const[data,setdat] = useState("reactstudy")
+  const[name,setname] = useState({name: 'avhii',age:20})
   return (
+    <Data.Provider value={{data,name}}>
     <Router>
     <div>
       <Header/>
@@ -25,7 +29,7 @@ const App = () => {
       <Route path='/app' element={<Useeffectuse/>} />
       </Route>
       <Route path='/app/:userId' element={<Userd/>}></Route>
-      <Route path='/about' element={<About />} />
+      <Route path='/about' element={<About/>} />
       <Route path='/contact' element={<Contact />} >
       <Route index element={<Insta/>} />
         <Route path='insta' element={<Insta/>} />
@@ -37,7 +41,9 @@ const App = () => {
       
     </div>
     </Router>
+    </Data.Provider>
   )
 }
 
-export default App
+export default App;
+export {Data}

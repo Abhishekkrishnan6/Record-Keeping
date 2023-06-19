@@ -50,3 +50,23 @@ margin-top: 15px;
   text-align: center;
   padding: 5px;
 }
+.compa{
+  background-color: blue;
+  padding: 5px;
+  margin: 8px;
+}
+.compb{
+  background-color: yellow;
+  padding: 5px;
+  margin: 8px;
+}
+.compc{
+  background-color: orange;
+  padding: 5px;
+  margin: 8px;
+}
+.about{
+  background-color: gray;
+  padding: 5px;
+  margin: 8px;
+}
