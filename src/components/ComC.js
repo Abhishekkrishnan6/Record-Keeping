@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import { Data } from '../App'
+import { Data } from '../App1'
 const ComC = () => {
   const Data1 = useContext(Data);
   return (
