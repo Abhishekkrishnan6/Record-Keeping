@@ -5,6 +5,7 @@ import Contact from './components/contact';
 import About from './components/About';
 import Twitter from './components/Twitter';
 import { useState, createContext } from 'react';
+import LoaderAndToaster from './components/LoaderAndToaster';
 import {
   BrowserRouter as Router,
   Routes,
@@ -50,7 +51,8 @@ const App = () => {
       
       
       <Route path='/usecallback' element={<UseCallback />}/>
-      
+      <Route path='/loadertoaster' element={<LoaderAndToaster/>} />
+
       </Routes>
       
     </div>

@@ -70,3 +70,12 @@ margin-top: 15px;
   padding: 5px;
   margin: 8px;
 }
+.main{
+  width: 100vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
