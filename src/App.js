@@ -17,6 +17,8 @@ import Userd from './components/Userd';
 import UseRef from './components/UseRef';
 import UseReducer from './components/UseReducer';
 import Customhook from './components/Customhook';
+import UseMomo from './components/UseMomo';
+import UseCallback from './components/UseCallback';
 const Data = createContext();
 const App = () => {
   const[data,setdat] = useState("reactstudy")
@@ -43,6 +45,11 @@ const App = () => {
       <Route path='/usereducer' element={<UseReducer />} />
       
       <Route path='/customhook' element={<Customhook />} />
+      <Route path='/usemomo' element={<UseMomo/>} />
+      
+      
+      
+      <Route path='/usecallback' element={<UseCallback />}/>
       
       </Routes>
       
