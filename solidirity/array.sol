@@ -13,7 +13,7 @@ function grtARRelement() public view returns(uint){
 
 function grtARRassign() public returns(uint){
     numbers[0] =6;
-    uint lenth1 = numbers.length;
+    //uint lenth1 = numbers.length;
     numbers.push(5);
     numbers.pop();
     return numbers[0];
