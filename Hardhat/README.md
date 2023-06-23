@@ -29,3 +29,23 @@ configuration ====
 to run local host just type npx hardhat node
 
              
+             to compile a contract just type npx hardhat compile
+
+
+
+
+
+             await ethers.getSigners();
+             ethers.getContractFactory("Greeter");
+
+
+
+             // deploy a contract
+             1. const Greeter = await ethers.getContractFactory("Greeter");
+             2. const greeter = await Greeter.deploy("hello web");
+             3. now we can use the functanitaly to all info from that greeter deployed contract
+
+             eg = greeter.address
+              await greeter.gree();
+
+            await  greeter.setGreeting("hi");
