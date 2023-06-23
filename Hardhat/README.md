@@ -17,5 +17,15 @@ step  2: npx hardhat
           then choose a option from given below
 step  3: then install dependicies 
           npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers            
-now simple hardhet project folder is ready   
+now simple hardhet project folder is ready 
+
+
+configuration ====
+1. from npx hardhat accounts we can import a account for hardhat network in ur metamask by using private key
+2. after importing we have to connet to localhost to get 10000eth for testing 
+
+3. give the url localhost after running  npx hardhat account here we get sih id also
+
+to run local host just type npx hardhat node
+
              

@@ -22,12 +22,7 @@ sepolia: {
       accounts: ["8719dcd276b7ac19b8ee5c2d29d60aa1c4c36cb135940fb0d82359c5605ddae2"]
     },
 
-    paths: {
-      sources: "./contracts",
-      tests: "./test",
-      cache: "./cache",
-      artifacts: "./artifacts"
-    }  
+    
   
 }
 
