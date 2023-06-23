@@ -11,3 +11,11 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+step  1: npm install --save-dev hardhat        
+step  2: npx hardhat   
+          then choose a option from given below
+step  3: then install dependicies 
+          npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers            
+now simple hardhet project folder is ready   
+             
