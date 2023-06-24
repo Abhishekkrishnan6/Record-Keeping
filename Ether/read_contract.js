@@ -6,7 +6,7 @@ const provider = new ethers.providers.JsonRpcProvider(
     RPC
 )
 
-const contractAddress = '0x92232E92868fe3598e58d52421dE557fD0f32F09';
+const contractAddress = '0xA032AdD03faba2085BA81f5D0572a986A5e7708a';
 const ABI= transfer.abi;
 
 async function call(){
