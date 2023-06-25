@@ -1,13 +1,36 @@
-
 import './App.css';
 import { useState, useEffect } from 'react';
-import {ethers} from 'ethers';
+import {Wallet, ethers} from 'ethers';
+import contract from './Greeter.json';
 function App() {
   const {ethereum} = window;
   const[address, setAddress] = useState('connet wallet');
   const[balance,setbalance] = useState('');
- 
-useEffect(()=>{
+  const[greeting,setgreeting] = useState('');
+  const contractAddress = "0x05c46645b125b79d2635C83340dF92196DCE4313";
+  
+  
+  const sepoliaprovider = new ethers.providers.JsonRpcProvider(
+    "https://sepolia.infura.io/v3/92749f7f986f4e64b94322c9258968c2"
+  )
+  const walletprovider = new ethers.providers.Web3Provider(
+    ethereum
+  )
+  const getcontractdata = new ethers.Contract(
+    contractAddress,
+    contract.abi,
+    sepoliaprovider
+  )
+
+  const sendcontracttx = new ethers.Contract(
+    contractAddress,
+     contract.abi,
+   (walletprovider.getSigner())
+
+  )
+
+
+  useEffect(()=>{
   ethereum.on("accountsChanged", (accounts) =>{
     setAddress(accounts[0]);
 
@@ -28,7 +51,15 @@ useEffect(()=>{
   })
 
 })
+const getgreeting = async()=>{
+  const data = await getcontractdata.greet();
+  setgreeting(data);
+}
 
+const setgreet = async()=>{
+  const senddata = await sendcontracttx.setGreeting("namaste india");
+  setgreeting(senddata);
+}
 const changeChain = async()=>{
   await ethereum.request({method: "wallet_addEthereumChain",
   params: [
@@ -110,9 +141,40 @@ setbalance(ethers.utils.formatEther(balance));
 
 
        </a>
+
+
+
+
+
+
+
+       <a className='App-link'
+       onClick={getgreeting}
+       >
+       get greeting
+
+
+       </a>
+
+       <a className='App-link'  
+       onClick={setgreet}
+       >
+       set greeting
+
+
+       </a>
+
+       <a className='App-link'  >
+        {greeting}
+
+
+       </a>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
+//0x05c46645b125b79d2635C83340dF92196DCE4313
